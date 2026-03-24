@@ -10,9 +10,12 @@ export const metadata: Metadata = {
   description:
     '성적표가 아닌 실력으로 증명하는 청소년 실전 역량 인증 플랫폼. 기업의 실제 미션을 수행하고, AI가 분석한 역량 인증서를 받으세요.',
   keywords: ['청소년', '인재교육', '실무프로젝트', '에듀테크', '취업연계', 'NEXUS', 'PACM', 'SkillBridge'],
+  metadataBase: new URL('https://nexus.pacm.kr'),
   openGraph: {
     title: 'NEXUS — 청소년 실전 역량 인증 플랫폼',
     description: '기업에겐 인재를, 청소년에겐 더 나은 미래를',
+    url: 'https://nexus.pacm.kr',
+    siteName: 'NEXUS by PACM',
     type: 'website',
   },
 }

@@ -1,4 +1,4 @@
-import { createServerClient, type CookieMethodsServer } from '@supabase/ssr'
+import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 
 export async function createClient() {
@@ -12,16 +12,18 @@ export async function createClient() {
         getAll() {
           return cookieStore.getAll()
         },
-        setAll(cookiesToSet: { name: string; value: string; options?: Record<string, unknown> }[]) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        setAll(cookiesToSet: any[]) {
           try {
-            cookiesToSet.forEach(({ name, value, options }) =>
-              cookieStore.set(name, value, options as Parameters<typeof cookieStore.set>[2])
+            cookiesToSet.forEach(({ name, value, options }: { name: string; value: string; options?: Record<string, unknown> }) =>
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              (cookieStore as any).set(name, value, options)
             )
           } catch {
-            // Server Component에서 호출될 때 무시
+            // Server Component에서 호출 시 무시
           }
         },
-      } satisfies CookieMethodsServer,
+      },
     }
   )
 }

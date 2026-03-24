@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    // 빌드 시 TypeScript 에러 무시 (개발 중 배포 우선)
     ignoreBuildErrors: true,
   },
   eslint: {
@@ -13,8 +12,17 @@ const nextConfig = {
       { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
     ],
   },
-  experimental: {
-    optimizePackageImports: ['lucide-react'],
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+        ],
+      },
+    ]
   },
 }
 
