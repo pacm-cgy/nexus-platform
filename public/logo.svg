@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none">
+  <!-- 육각형 아이콘 -->
+  <polygon points="40,4 69.3,21 69.3,55 40,72 10.7,55 10.7,21" fill="#B8FF47"/>
+  <polygon points="40,12 63.5,25.5 63.5,52.5 40,66 16.5,52.5 16.5,25.5" fill="#0A1628"/>
+  <polygon points="40,24 55,32.5 55,49.5 40,58 25,49.5 25,32.5" fill="#B8FF47"/>
+  <!-- NEXUS 텍스트 -->
+  <text x="86" y="55" font-family="'Bebas Neue','DejaVu Sans',sans-serif" font-size="46" font-weight="700" fill="#F5F5F0" letter-spacing="2">NEXUS</text>
+  <!-- by PACM -->
+  <text x="88" y="72" font-family="'Space Mono','DejaVu Sans',monospace" font-size="12" fill="#8892A4">by PACM</text>
+</svg>
