@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   },
   description:
     '성적표가 아닌 실력으로 증명하는 청소년 실전 역량 인증 플랫폼. 기업의 실제 미션을 수행하고, AI가 분석한 역량 인증서를 받으세요.',
-  keywords: ['청소년', '인재교육', '실무프로젝트', '에듀테크', '취업연계', 'NEXUS', 'PACM', 'SkillBridge'],
+  keywords: ['청소년', '인재교육', '실무프로젝트', '에듀테크', '취업연계', 'NEXUS', 'PACM'],
   metadataBase: new URL('https://nexus.pacm.kr'),
   openGraph: {
     title: 'NEXUS — 청소년 실전 역량 인증 플랫폼',
@@ -17,6 +17,30 @@ export const metadata: Metadata = {
     url: 'https://nexus.pacm.kr',
     siteName: 'NEXUS by PACM',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'NEXUS by PACM',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEXUS — 청소년 실전 역량 인증 플랫폼',
+    description: '기업에겐 인재를, 청소년에겐 더 나은 미래를',
+    images: ['/og-image.png'],
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 }
 
